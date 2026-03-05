@@ -37,7 +37,7 @@ function App() {
       setComposite(res.data.composite_score || null);
 
       // Get comparison (previous benchmark)
-      const compRes = await axios.get(`http://localhost:8000/compare/${profile.user_id}`);
+      const compRes = await axios.get(`${API_BASE}/compare/${profile.user_id}`);
       setComparison(compRes.data);
 
       setScreen('heatmap');
