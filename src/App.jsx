@@ -72,7 +72,7 @@ function App() {
     <div style={{ padding: '32px', maxWidth: '900px', margin: '0 auto', fontFamily: 'system-ui, sans-serif' }}>
       {screen === 'profile' ? (
         <div>
-          <h1>AI Readiness Benchmark</h1>
+          <h1>AI Readiness Benchmark {API_BASE}</h1>
           <p style={{ color: '#555', marginBottom: '32px' }}>
             Select your organization and role to see personalized results.
           </p>
