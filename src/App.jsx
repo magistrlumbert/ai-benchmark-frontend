@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
+const API_BASE = import.meta.env.VITE_API_BASE || 'http://localhost:8000';
+
 function App() {
   const [screen, setScreen] = useState('profile');
   const [profile, setProfile] = useState({
@@ -27,7 +29,7 @@ function App() {
     setError(null);
 
     try {
-      const res = await axios.post('http://localhost:8000/heatmap', profile, {
+      const res = await axios.post(`${API_BASE}/heatmap`, profile, {
         headers: { 'Content-Type': 'application/json' },
       });
 
